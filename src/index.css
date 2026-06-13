@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --color-brand-50: #FFF7ED;
+  --color-brand-100: #FFEDD5;
+  --color-brand-200: #FED7AA;
+  --color-brand-300: #FDBA74;
+  --color-brand-400: #FB923C;
+  --color-brand-500: #F97316;
+  --color-brand-600: #EA580C;
+  --color-brand-700: #C2410C;
+  --color-brand-800: #9A3412;
+  --color-brand-900: #7C2D12;
+  --color-dark-50: #F8F7F6;
+  --color-dark-100: #E8E6E3;
+  --color-dark-200: #D3CFC9;
+  --color-dark-300: #B5AFA6;
+  --color-dark-400: #918A7E;
+  --color-dark-500: #706A5F;
+  --color-dark-600: #5A5449;
+  --color-dark-700: #49443B;
+  --color-dark-800: #3D3933;
+  --color-dark-900: #2A2722;
+  --color-dark-950: #1A1816;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1A1816;
+  color: #E8E6E3;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1816;
+}
+::-webkit-scrollbar-thumb {
+  background: #49443B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5A5449;
+}
+
+/* Steam animation */
+@keyframes steam {
+  0% { transform: translateY(0) scaleX(1); opacity: 0.4; }
+  50% { transform: translateY(-20px) scaleX(1.2); opacity: 0.2; }
+  100% { transform: translateY(-40px) scaleX(0.8); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes grain-move {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  30% { transform: translate(3%, -15%); }
+  50% { transform: translate(-8%, 5%); }
+  70% { transform: translate(9%, -5%); }
+  90% { transform: translate(-3%, 8%); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-steam {
+  animation: steam 3s ease-in-out infinite;
+}
+
+.animate-steam-delayed {
+  animation: steam 3s ease-in-out infinite 1s;
+}
+
+.animate-steam-slow {
+  animation: steam 4s ease-in-out infinite 0.5s;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 8s ease-in-out infinite 2s;
+}
+
+.animate-grain {
+  animation: grain-move 8s steps(10) infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+/* Page transition */
+.page-enter {
+  animation: fade-in 0.4s ease-out;
+}
