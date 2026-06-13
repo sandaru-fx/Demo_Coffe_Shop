@@ -9,11 +9,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/20">
-                <Coffee className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center shadow-lg shadow-brand-500/20">
+                <img src="/src/assets/logo.png" alt="SKARA COFFEE Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <span className="text-[18px] font-bold text-white tracking-tight">Brew & Co.</span>
+                <span className="text-[18px] font-bold text-white tracking-tight">SKARA COFFEE</span>
                 <span className="block text-[10px] font-medium text-brand-400 tracking-[0.2em] uppercase -mt-0.5">Coffee House</span>
               </div>
             </div>
@@ -52,9 +52,9 @@ export default function Footer() {
             <h4 className="text-[12px] font-semibold text-brand-500 tracking-[0.15em] uppercase mb-6">Get In Touch</h4>
             <div className="space-y-4">
               {[
-                { icon: MapPin, text: "42 Workspace Lane, Creative District" },
-                { icon: Phone, text: "+1 (555) 234-5678" },
-                { icon: Mail, text: "hello@brewandco.com" },
+                { icon: MapPin, text: "12 Lighthouse Street, Galle Fort" },
+                { icon: Phone, text: "+94 77 123 4567" },
+                { icon: Mail, text: "hello@brewandco.lk" },
               ].map(({ icon: Icon, text }, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <Icon className="w-4 h-4 text-brand-500 mt-1 shrink-0" />
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-dark-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[14px] text-dark-500">© 2026 Brew & Co. All rights reserved.</p>
+          <p className="text-[14px] text-dark-500">© 2026 SKARA COFFEE. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-[14px] text-dark-500 hover:text-dark-300 transition-colors">Privacy Policy</a>
             <a href="#" className="text-[14px] text-dark-500 hover:text-dark-300 transition-colors">Terms of Service</a>

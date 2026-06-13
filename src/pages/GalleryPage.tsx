@@ -50,7 +50,7 @@ export default function GalleryPage() {
             <p className="text-[12px] font-semibold text-brand-500 tracking-[0.2em] uppercase mb-3">Visual Story</p>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Gallery</h1>
             <p className="text-[18px] text-dark-300 max-w-xl mx-auto">
-              A glimpse into the Brew & Co. experience — from our space to our craft.
+              A glimpse into the SKARA COFFEE experience — from our space to our craft.
             </p>
           </motion.div>
         </div>

@@ -7,6 +7,7 @@ import MenuPage from "./pages/MenuPage";
 import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
 import ContactPage from "./pages/ContactPage";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppWidget />
     </>
   );
 }

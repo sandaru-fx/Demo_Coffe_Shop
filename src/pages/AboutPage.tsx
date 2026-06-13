@@ -10,11 +10,11 @@ const COUNTER_IMG = "https://images.pexels.com/photos/18105587/pexels-photo-1810
 const STOREFRONT_IMG = "https://images.pexels.com/photos/19093452/pexels-photo-19093452.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
 
 const timeline = [
-  { year: "2019", title: "The Beginning", desc: "Two coffee-obsessed professionals opened a tiny 12-seat space with a big dream: make the perfect third place between home and office." },
-  { year: "2020", title: "Pivoting Forward", desc: "Launched our online bean subscription and created outdoor pods to serve the community safely during uncertain times." },
-  { year: "2021", title: "The Expansion", desc: "Moved to our current 3,000 sq ft location with dedicated co-working zones, meeting pods, and an expanded roastery." },
-  { year: "2023", title: "Award Season", desc: "Named 'Best Coffee Shop for Remote Workers' by City Magazine. Launched our barista training program." },
-  { year: "2025", title: "Growing Community", desc: "Surpassed 12,000 loyal customers. Partnered with local farms for our seasonal food menu. Opened our roastery tours." },
+  { year: "2026", title: "The Beginning", desc: "Two coffee-obsessed professionals opened a tiny 12-seat space in Galle Fort with a big dream: make the perfect third place between home and office." },
+  { year: "2027", title: "Pivoting Forward", desc: "Launched our online bean subscription focusing on Sri Lankan single-origin beans and created outdoor pods to serve the community." },
+  { year: "2028", title: "The Expansion", desc: "Moved to our current 3,000 sq ft location near the Lighthouse with dedicated co-working zones, meeting pods, and an expanded roastery." },
+  { year: "2029", title: "Award Season", desc: "Named 'Best Coffee Shop in the Southern Province' by local magazines. Launched our barista training program." },
+  { year: "2030", title: "Growing Community", desc: "Surpassed 12,000 loyal customers. Partnered with local farms in the hill country for our seasonal food menu. Opened our roastery tours." },
 ];
 
 export default function AboutPage() {
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 Fuel Ambition, One Cup at a Time
               </h2>
               <p className="text-[18px] text-dark-300 leading-relaxed mb-6">
-                We started Brew & Co. because we were tired of choosing between good coffee 
+                We started SKARA COFFEE because we were tired of choosing between good coffee 
                 and a productive workspace. So we created a place that offers both — 
                 no compromises.
               </p>
@@ -181,9 +181,9 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { img: BARISTA_IMG, name: "Ana & Priya", role: "Head Baristas", desc: "Award-winning duo with 15 years combined experience in specialty coffee" },
-              { img: TEAM_IMG, name: "David Chen", role: "Operations Lead", desc: "Former tech PM who ensures our workspace tech runs flawlessly" },
-              { img: STOREFRONT_IMG, name: "The Space", role: "Our Home Since 2021", desc: "3,000 sq ft of curated comfort in the heart of the Creative District" },
+              { img: BARISTA_IMG, name: "Ana & Priya", role: "Head Baristas", desc: "Award-winning duo with 15 years combined experience in Sri Lankan specialty coffee" },
+              { img: TEAM_IMG, name: "David Chen", role: "Operations Lead", desc: "Ensures our workspace tech runs flawlessly despite the salty sea breeze" },
+              { img: STOREFRONT_IMG, name: "The Space", role: "Our Home Since 2028", desc: "3,000 sq ft of curated comfort in the heart of the Galle Fort" },
             ].map((member, i) => (
               <motion.div
                 key={i}

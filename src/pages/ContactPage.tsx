@@ -5,15 +5,23 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
 const STOREFRONT_IMG = "https://images.pexels.com/photos/19093452/pexels-photo-19093452.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
 
 export default function ContactPage() {
-  const [formState, setFormState] = useState({ name: "", email: "", subject: "", message: "" });
+  const [formState, setFormState] = useState({ name: "", email: "", phone: "", date: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+    
+    // Format the message for WhatsApp
+    const whatsappNumber = "94700000000"; // Placeholder, user will change this
+    const message = `*New Inquiry from Website*%0A%0A*Name:* ${formState.name}%0A*Email:* ${formState.email}%0A*Phone:* ${formState.phone}%0A*Date:* ${formState.date}%0A*Subject:* ${formState.subject}%0A*Message:* ${formState.message}`;
+    
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappUrl, "_blank");
+
     setTimeout(() => {
       setSubmitted(false);
-      setFormState({ name: "", email: "", subject: "", message: "" });
+      setFormState({ name: "", email: "", phone: "", date: "", subject: "", message: "" });
     }, 3000);
   };
 
@@ -58,17 +66,17 @@ export default function ContactPage() {
                   {
                     icon: MapPin,
                     title: "Visit Us",
-                    lines: ["42 Workspace Lane", "Creative District, City 10001"],
+                    lines: ["12 Lighthouse Street", "Galle Fort, Sri Lanka"],
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
-                    lines: ["+1 (555) 234-5678", "Mon — Fri, 7 AM — 8 PM"],
+                    lines: ["+94 77 123 4567", "Mon — Sun, 7 AM — 9 PM"],
                   },
                   {
                     icon: Mail,
                     title: "Email Us",
-                    lines: ["hello@brewandco.com", "We respond within 24 hours"],
+                    lines: ["hello@brewandco.lk", "We respond within 24 hours"],
                   },
                   {
                     icon: Clock,
@@ -97,20 +105,18 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-dark-800/50 aspect-video bg-dark-900/50 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 text-brand-500 mx-auto mb-3" />
-                  <p className="text-[16px] text-dark-400">42 Workspace Lane, Creative District</p>
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-block mt-3 text-[14px] text-brand-500 hover:text-brand-400 font-medium transition-colors"
-                  >
-                    Open in Google Maps →
-                  </a>
-                </div>
+              {/* Map embed */}
+              <div className="rounded-2xl overflow-hidden border border-dark-800/50 aspect-video bg-dark-900/50 relative">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15871.309489569769!2d80.2081515!3d6.0270034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173a11685bc97%3A0xc47e33555db6c22!2sGalle%20Fort!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 grayscale contrast-125 opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                ></iframe>
               </div>
             </motion.div>
 
@@ -159,6 +165,26 @@ export default function ContactPage() {
                           value={formState.email}
                           onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                           placeholder="your@email.com"
+                          className="w-full px-4 py-3 bg-dark-800/50 border border-dark-700/50 rounded-xl text-[16px] text-white placeholder:text-dark-500 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[14px] font-medium text-dark-300 mb-2">Phone</label>
+                        <input
+                          type="tel"
+                          required
+                          value={formState.phone}
+                          onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
+                          placeholder="Your phone number"
+                          className="w-full px-4 py-3 bg-dark-800/50 border border-dark-700/50 rounded-xl text-[16px] text-white placeholder:text-dark-500 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[14px] font-medium text-dark-300 mb-2">Reservation Date (Optional)</label>
+                        <input
+                          type="date"
+                          value={formState.date}
+                          onChange={(e) => setFormState({ ...formState, date: e.target.value })}
                           className="w-full px-4 py-3 bg-dark-800/50 border border-dark-700/50 rounded-xl text-[16px] text-white placeholder:text-dark-500 focus:outline-none focus:border-brand-500/50 focus:ring-1 focus:ring-brand-500/20 transition-all"
                         />
                       </div>

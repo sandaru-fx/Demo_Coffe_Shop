@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Clock, MapPin, Wifi, Users, Coffee as CoffeeIcon } from "lucide-react";
+import heroBg from "../assets/hero_bg.png";
 
-const HERO_IMG = "https://images.pexels.com/photos/18150815/pexels-photo-18150815.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1600";
+const HERO_IMG = heroBg;
 const INTERIOR_IMG = "https://images.pexels.com/photos/36484101/pexels-photo-36484101.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
 const COFFEE_CUP_IMG = "https://images.pexels.com/photos/129209/pexels-photo-129209.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
 const LATTE_IMG = "https://images.pexels.com/photos/531761/pexels-photo-531761.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200";
@@ -156,7 +157,7 @@ export default function HomePage() {
               custom={0}
               className="text-[12px] font-semibold text-brand-500 tracking-[0.2em] uppercase mb-4"
             >
-              Est. 2019 — Premium Coffee Experience
+              Est. 2026 — Premium Coffee Experience
             </motion.p>
 
             <motion.h1
@@ -175,7 +176,7 @@ export default function HomePage() {
               custom={2}
               className="text-[18px] text-dark-300 leading-relaxed mb-10 max-w-lg"
             >
-              A polished coffee experience designed for the modern professional. 
+              A polished coffee experience designed for the modern professional right in the heart of Galle. 
               Artisanal brews, refined ambiance, and a workspace that inspires — 
               all under one roof.
             </motion.p>
@@ -322,7 +323,7 @@ export default function HomePage() {
               </h2>
               <p className="text-[18px] text-dark-300 leading-relaxed mb-6">
                 Born from the idea that your workspace and your coffee should both be exceptional, 
-                Brew & Co. brings together the precision of specialty coffee with the comfort of 
+                SKARA COFFEE brings together the precision of specialty coffee with the comfort of 
                 a well-designed office environment.
               </p>
               <p className="text-[16px] text-dark-400 leading-relaxed mb-8">
@@ -414,9 +415,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Sarah Mitchell", role: "Freelance Designer", quote: "Brew & Co. has become my second office. The coffee is incredible, the WiFi never drops, and the ambiance is perfectly balanced — not too quiet, not too loud.", rating: 5 },
-              { name: "James Park", role: "Startup Founder", quote: "We've held multiple team meetings here. The private pods are a game-changer, and their single-origin pour-overs are simply the best in the city.", rating: 5 },
-              { name: "Elena Rodriguez", role: "Content Writer", quote: "I've tried every coffee shop in the district. Nothing compares to the attention to detail here — from the beans to the seating, everything is thoughtfully curated.", rating: 5 },
+              { name: "Sarah Mitchell", role: "Freelance Designer", quote: "SKARA COFFEE has become my second office in Galle. The coffee is incredible, the WiFi never drops, and the ambiance is perfectly balanced — not too quiet, not too loud.", rating: 5 },
+              { name: "James Park", role: "Tourist & Blogger", quote: "We've stopped by multiple times while exploring the Fort. Their single-origin pour-overs are simply the best in the Southern Province.", rating: 5 },
+              { name: "Elena Rodriguez", role: "Digital Nomad", quote: "I've tried every coffee shop in the district. Nothing compares to the attention to detail here — from the beans to the seating, everything is thoughtfully curated.", rating: 5 },
             ].map((t, i) => (
               <motion.div
                 key={i}

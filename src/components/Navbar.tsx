@@ -38,12 +38,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-brand-500/20">
-              <Coffee className="w-5 h-5 text-white" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-brand-500/20">
+              <img src="/src/assets/logo.png" alt="SKARA COFFEE Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <span className="text-[18px] font-bold text-white tracking-tight">
-                Brew & Co.
+                SKARA COFFEE
               </span>
               <span className="block text-[10px] font-medium text-brand-400 tracking-[0.2em] uppercase -mt-0.5">
                 Coffee House
